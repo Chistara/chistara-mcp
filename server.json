@@ -3,8 +3,12 @@
   "name": "ai.hoghogh/chistara",
   "title": "چیستارا — Iranian Legal Corpus",
   "description": "Iranian statutes, rulings, opinions and legal calculators. Needs a paid Chistara connection link.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "websiteUrl": "https://hoghogh.ai",
+  "repository": {
+    "url": "https://github.com/Chistara/chistara-mcp",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",
