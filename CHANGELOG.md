@@ -3,6 +3,8 @@
 Versions follow the MCP Registry entry `ai.hoghogh/chistara` and the server's `serverInfo.version`.
 
 ## 1.1.1 — 2026-11-13
+- **Sign in with OAuth:** `https://hoghogh.ai/mcp/connect` — Claude and ChatGPT connect by signing in to Chistara
+  (OAuth 2.1, PKCE, dynamic client registration); no personal link to copy. `/mcp` and personal links keep working.
 - The registry entry links this repository. Tools unchanged.
 
 ## 1.1.0 — 2026-10-27

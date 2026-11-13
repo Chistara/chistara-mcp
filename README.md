@@ -11,7 +11,7 @@ on hoghogh.ai, so the assistant can cite the exact article or ruling instead of 
 
 | | |
 |---|---|
-| Endpoint | `https://hoghogh.ai/mcp` (Streamable HTTP) |
+| Endpoint | `https://hoghogh.ai/mcp/connect` (OAuth sign-in) · `https://hoghogh.ai/mcp` (personal link) — Streamable HTTP |
 | Official MCP Registry | `ai.hoghogh/chistara` |
 | Tools | 23, all read-only (`readOnlyHint: true`, `destructiveHint: false`) |
 | Language | Persian content; tool titles in Persian and English |
@@ -19,18 +19,25 @@ on hoghogh.ai, so the assistant can cite the exact article or ruling instead of 
 
 ## Connect
 
-1. Sign in at [hoghogh.ai](https://hoghogh.ai) and open **Settings → دستیار هوشمند → MCP**
-   ([direct link](https://hoghogh.ai/app/settings?tab=assistant#mcp)). Copy your **personal connection link**
-   (`https://hoghogh.ai/mcp/<token>`).
-2. Add it in your assistant:
-   - **Claude** (claude.ai or the desktop app): Settings → Connectors → *Add custom connector* → paste the link.
-   - **ChatGPT**: Settings → Connectors → *Create* (developer mode) → paste the link.
-   - **Codex, Cursor, VS Code and other clients**: server URL `https://hoghogh.ai/mcp` with the header
-     `Authorization: Bearer <token>`, or the personal link on its own.
+**Claude and ChatGPT (sign in, recommended)**
+
+1. Add a custom connector with the URL **`https://hoghogh.ai/mcp/connect`**
+   - Claude (claude.ai or the desktop app): Settings → Connectors → *Add custom connector*.
+   - ChatGPT: Settings → Apps & Connectors → *Create* (developer mode).
+2. Your assistant opens Chistara's sign-in page: sign in to your Chistara account and choose **Allow**.
 3. Ask a question about Iranian law. The assistant calls the tools it needs and cites the sources.
 
-> **Your connection link is a key to your account.** Paste it only into the assistant itself, never into a website that
-> offers to connect it for you. You can revoke it and make a new one in the same settings card.
+This is standard OAuth 2.1 (PKCE, dynamic client registration). Disconnect at any time in Chistara:
+Settings → دستیار هوشمند → «برنامه‌های متصل».
+
+**Other MCP clients (Codex, Cursor, VS Code, Perplexity…)**
+
+Use your **personal connection link** from [Settings → دستیار هوشمند → MCP](https://hoghogh.ai/app/settings?tab=assistant#mcp)
+(`https://hoghogh.ai/mcp/<token>`), or the server URL `https://hoghogh.ai/mcp` with the header
+`Authorization: Bearer <token>`.
+
+> **A personal link is a key to your account.** Paste it only into the assistant itself, never into a website that offers to
+> connect it for you. You can revoke it and make a new one in the same settings card.
 
 Tool *listing* is public so clients and directories can read the definitions; every tool *call* needs the personal link.
 
