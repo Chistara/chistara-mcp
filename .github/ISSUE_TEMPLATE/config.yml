@@ -1,10 +1,10 @@
 blank_issues_enabled: false
 contact_links:
   - name: Account, credit or app support
-    url: https://hoghogh.ai/support
+    url: https://hoghogh.ai/contact
     about: Questions about your Chistara account, credit or the apps.
   - name: A wrong legal text, ruling or figure
-    url: https://hoghogh.ai/support
+    url: https://hoghogh.ai/contact
     about: Report it in the app (next to the text) or through support, so it is checked against its official source.
   - name: Security issue
     url: https://github.com/Chistara/chistara-mcp/security/advisories/new
