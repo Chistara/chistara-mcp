@@ -1,0 +1,15 @@
+name: Tool or documentation feedback
+description: A tool description, a result format or this documentation could be better
+labels: [feedback]
+body:
+  - type: input
+    id: tool
+    attributes:
+      label: Tool
+      placeholder: e.g. search_law_articles
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+    validations:
+      required: true

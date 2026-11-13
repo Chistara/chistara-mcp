@@ -1,0 +1,26 @@
+name: Connection problem
+description: Chistara does not connect, or a tool call fails, in Claude, ChatGPT or another MCP client
+labels: [connection]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste your personal connection link (`https://hoghogh.ai/mcp/<token>`) or your token here.** It is a key to your account.
+  - type: dropdown
+    id: client
+    attributes:
+      label: Client
+      options: [Claude (web or desktop), ChatGPT, Codex, Cursor, VS Code, Perplexity, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The message you saw, the tool name if one failed, and the time (with time zone).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
