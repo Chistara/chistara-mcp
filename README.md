@@ -3,7 +3,7 @@
 **Chistara (چیستارا, [hoghogh.ai](https://hoghogh.ai))** is an AI legal assistant for Iranian law. This MCP server gives
 Claude, ChatGPT, Codex, Perplexity and any other MCP client the same verified legal corpus and calculators that power the
 Chistara app: 70,000+ statute articles and notes, 50,000+ court rulings, the Judiciary's advisory opinions, official
-circulars, yearly official rates and procedural deadlines, and 14 legal calculators. Every result carries a `source_url`
+circulars, yearly official rates and procedural deadlines, and 14 of its 16 legal calculators. Every result carries a `source_url`
 on hoghogh.ai, so the assistant can cite the exact article or ruling instead of answering from memory.
 
 چیستارا دستیار حقوقی هوش مصنوعی برای قوانین ایران است. با این سرور MCP، Claude و ChatGPT و دیگر دستیارها به همان
